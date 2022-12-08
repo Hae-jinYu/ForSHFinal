@@ -13,6 +13,6 @@ public class GotoStage1 : MonoBehaviour
     */
     public void SceneChange()
     {
-        SceneManager.LoadScene("GameStart"); // 씬 이름 수정하기
+        SceneManager.LoadScene("Stage1");
     }
 }

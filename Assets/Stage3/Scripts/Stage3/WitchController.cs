@@ -6,8 +6,9 @@ using UnityEngine.AI;
 public class WitchController : MonoBehaviour
 {
     public Transform target;
-    private NavMeshAgent nvAgent;    
+    private NavMeshAgent nvAgent;
 
+    public ThirdManager manager;
     Animator anim;
     public bool isChase;
     public int health;
@@ -38,8 +39,9 @@ public class WitchController : MonoBehaviour
         if (health <= 0)
         {
             isChase = false;
-            anim.SetTrigger("doDie");
-            Destroy(gameObject, 4);
+            //anim.SetTrigger("doDie");
+            //Destroy(gameObject, 4);
+            manager.nextScence();
         }
     }
 }

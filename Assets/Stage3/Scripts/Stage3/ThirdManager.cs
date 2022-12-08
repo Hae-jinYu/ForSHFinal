@@ -86,4 +86,9 @@ public class ThirdManager : MonoBehaviour
         elf.isStop = true;
         witch.isChase = false;
     }
+
+    public void nextScence()
+    {
+        SceneManager.LoadScene(7);
+    }
 }

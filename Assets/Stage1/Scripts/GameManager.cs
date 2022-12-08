@@ -41,6 +41,11 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void MainTitle()
+    {
+        SceneManager.LoadScene("GameStart");
+    }
     public void Menu()
     {
         GamePanel.SetActive(false);

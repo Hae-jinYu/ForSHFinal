@@ -2677,6 +2677,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f5b0326a455187a4bb3e1dd25351edb9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f5b0326a455187a4bb3e1dd25351edb9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f5b0326a455187a4bb3e1dd25351edb9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 400206, guid: f5b0326a455187a4bb3e1dd25351edb9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2721,6 +2733,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400212, guid: f5b0326a455187a4bb3e1dd25351edb9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.41
+      objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: f5b0326a455187a4bb3e1dd25351edb9, type: 3}
       propertyPath: m_Controller
       value: 
@@ -2757,7 +2773,7 @@ MonoBehaviour:
   item:
   - {fileID: 1171891686}
   hasItem: 00000000000000
-  health: 300
+  health: 10
   manager: {fileID: 1590995573}
   equipWeapon: {fileID: 0}
 --- !u!136 &260063383
@@ -2773,7 +2789,7 @@ CapsuleCollider:
   m_Radius: 1
   m_Height: 3
   m_Direction: 1
-  m_Center: {x: 0, y: 1.62, z: 0}
+  m_Center: {x: -0.36, y: 2, z: 0}
 --- !u!54 &260063384
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14223,7 +14239,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1236563674}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1590995573}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: MainTitle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1236563674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17990,6 +18018,7 @@ MonoBehaviour:
   GamePanel: {fileID: 2115688807}
   OverPanel: {fileID: 714021830}
   MenuPanel: {fileID: 1173417194}
+  audio: {fileID: 385685870}
   enemytxt: {fileID: 1273511664}
   playerHealth: {fileID: 680949856}
   weaponImg: {fileID: 984712711}

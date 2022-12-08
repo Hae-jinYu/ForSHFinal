@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 63f68174ac20d6f4f8af1742ad5e17cd
+=======
+guid: eb1b41db1e6fb824dbacbcdf257ed47c
+>>>>>>> Stashed changes
 ModelImporter:
   serializedVersion: 22103
   internalIDToNameTable:
@@ -764,10 +768,17 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips:
+<<<<<<< Updated upstream
   - ef8cc4ed28d767a409ae52e482390d8f
   - beeda4e5cd2830a40b50f743e6124efd
   - 2230e9e1fe810c04b83ca30d72082ec2
   - 8b6c29dc215c9f745a72e2346998ef77
+=======
+  - a497ae09068d9ca48b2dad5318b8b72a
+  - 4273b519734206f4f9562d9499fd3a3e
+  - 11552afa33b091d429383c55fc837106
+  - f45a7b51e25ebbe45a599d91bd2b17a5
+>>>>>>> Stashed changes
   importAnimation: 0
   humanDescription:
     serializedVersion: 3

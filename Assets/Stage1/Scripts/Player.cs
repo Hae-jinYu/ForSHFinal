@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     float hAxis;
     float vAxis;
     public GameManager manager;
+   
 
     bool fDown;
     bool iDown;
@@ -162,9 +163,10 @@ public class Player : MonoBehaviour
 
     void OnDie()
     {
-        anim.SetTrigger("doDie");
+       
         isDead = true;
         manager.GameOver();
+        
     }
     private void OnTriggerStay(Collider other)
     {

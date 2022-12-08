@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject GamePanel;
     public GameObject OverPanel;
     public GameObject MenuPanel;
+    public AudioSource audio;
 
     public Text enemytxt;
     public Text playerHealth;
@@ -33,13 +34,15 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         GamePanel.SetActive(false);
+       
+        audio.Stop();
         OverPanel.SetActive(true);
 
     }
 
     public void Restart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Stage1");
     }
 
     public void MainTitle()
@@ -49,6 +52,7 @@ public class GameManager : MonoBehaviour
     public void Menu()
     {
         GamePanel.SetActive(false);
+        
         MenuPanel.SetActive(true);
     }
 

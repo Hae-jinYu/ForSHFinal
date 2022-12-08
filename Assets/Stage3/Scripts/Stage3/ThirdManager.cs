@@ -11,6 +11,10 @@ public class ThirdManager : MonoBehaviour
     public Text heartTxt;
     public Button pourButton;
     public Button menu;
+    public Button restart;
+    public Button goMainOver;
+    public Button goMain;
+    public Button restartOver;
     public WitchController witch;
 
     public GameObject GamePanel;
@@ -28,6 +32,10 @@ public class ThirdManager : MonoBehaviour
     {
         pourButton.onClick.AddListener(OnClickButton);
         menu.onClick.AddListener(OnClickMenu);
+        restart.onClick.AddListener(OnClickRestart);
+        goMain.onClick.AddListener(OnClickGomain);
+        goMainOver.onClick.AddListener(OnClickGomain);
+        restartOver.onClick.AddListener(OnClickRestartOver);
     }
 
     // Update is called once per frame
@@ -37,13 +45,23 @@ public class ThirdManager : MonoBehaviour
         heartTxt.text = elf.heart.ToString();
     }
 
-    public void Restart()
+    public void OnClickRestartOver()
+    {
+        SceneManager.LoadScene(6);
+    }
+
+    public void OnClickGomain()
+    {
+        SceneManager.LoadScene(0);
+    }
+    public void OnClickRestart()
     {
         MenuPanel.SetActive(false);
         GamePanel.SetActive(true);
         elf.isStop = false;
         witch.isChase = true;
     }
+
     public void OnClickButton()
     {
         Debug.Log("Pour!");

@@ -8,6 +8,7 @@ public class Nextstage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        manager.NextstageStart();
+        if(other.tag=="Player")
+            manager.NextstageStart();
     }
 }

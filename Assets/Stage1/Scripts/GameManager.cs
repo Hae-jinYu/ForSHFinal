@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     public void NextstageStart()
     {
-        //SceneManager.LoadScene();
+        SceneManager.LoadScene("St1After");
     }
 
     public void stageEnd()

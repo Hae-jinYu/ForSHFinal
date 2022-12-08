@@ -111,6 +111,7 @@ public class Player : MonoBehaviour
             anim.SetTrigger("doSwing");
             Debug.Log("attack");
             fireDelay = 0;
+            
         }
     }
     void Interaction()
@@ -147,7 +148,7 @@ public class Player : MonoBehaviour
         {
             mesh.material.color = Color.red;
         }
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
 
         isDamage = false;
         foreach (MeshRenderer mesh in meshs)

@@ -37,31 +37,27 @@ public class Enemy : MonoBehaviour
             curHealth -= weapon.damage;
             StartCoroutine(OnDamage());
             Debug.Log("Melee : " + curHealth);
+            
         }
     }
 
     IEnumerator OnDamage()
     {
         
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
 
         if(curHealth>0)
         {
             mat.color = Color.red;
-            manager.enemywlof = manager.enemywlof - 1;
+            
         }
         else
         {
             mat.color = Color.gray;
             Destroy(gameObject, 0.2f);
-
-            
+            manager.enemywlof--;
 
         }
-
-        
-       
-
-        
+    
     }
 }

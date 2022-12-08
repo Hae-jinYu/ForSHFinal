@@ -15,9 +15,9 @@ public class GameOver : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        gameOverText.SetActive(false);
+        //gameOverText.SetActive(false);
         //timeBar = GetComponent<Image>();
-        tl=time.timeLeft;
+        
         //timeLeft = maxTime;
     }
 
@@ -25,7 +25,9 @@ public class GameOver : MonoBehaviour
     void Update()
     {
 
-		if(tl<=0||player.health2<=0)
+        tl = time.timeLeft;
+
+        if (tl<=0||player.health2<=0)
 		{
             gameOverText.SetActive(true);
 			Time.timeScale = 0;

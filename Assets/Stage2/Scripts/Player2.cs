@@ -6,7 +6,10 @@ public class Player2 : MonoBehaviour
 {
     public float speed2;
     public GameObject[] hay;//배열
+    [SerializeField] GameObject gameOverText;
 
+    float tl;
+    TimeManager time;
 
     public bool isShield = false;
 
@@ -18,7 +21,7 @@ public class Player2 : MonoBehaviour
     bool jDown;//점프 애니메이션
     bool isJump;
     bool iDown2;//아이템 상호작용'
-
+    public int shieldnum;
     public int health2 = 3;
 
     Vector3 moveVec2;
@@ -30,6 +33,7 @@ public class Player2 : MonoBehaviour
     GameObject nearObject;
     void Awake()
     {
+        gameOverText.SetActive(false);
         rigid2 = GetComponent<Rigidbody>();
         anim2 = GetComponentInChildren<Animator>();
 
@@ -46,7 +50,7 @@ public class Player2 : MonoBehaviour
         Turn2();
         Jump();
 
-        if (health2 == 0)
+        if (health2 <= 0)
         {
             //if (!isDie)
             Die();
@@ -90,6 +94,11 @@ public class Player2 : MonoBehaviour
     {
         //isDie = true;
         rigid2.velocity = Vector3.zero;
+        if ( health2 <= 0)
+        {
+            gameOverText.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
     /*void Interaction()
 	{
@@ -121,6 +130,7 @@ public class Player2 : MonoBehaviour
                 //hayShield = true;
                 ActivateShield();
                 //방어막 생김
+                shieldnum++;
             }
             Destroy(other.gameObject);
         }
@@ -141,6 +151,7 @@ public class Player2 : MonoBehaviour
     {
         Shield.SetActive(true);
         isShield = true;
+
         Invoke("NoShield", 5f);//5초후에 방어막 끄기
     }
 

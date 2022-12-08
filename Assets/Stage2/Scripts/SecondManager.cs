@@ -20,7 +20,7 @@ public class SecondManager : MonoBehaviour
 
     public void NextstageStart()
     {
-        // ScenManager.LoadScene();
+        SceneManager.LoadScene("St2After");
     }
 
 
@@ -56,7 +56,8 @@ public class SecondManager : MonoBehaviour
 
         playerHealth2.text = "[" + player2.health2 + "]";
 
-        haytxt.text = hay.ToString();
+        //haytxt.text = hay.ToString();
+        haytxt.text = player2.shieldnum.ToString();
 
     }
 }

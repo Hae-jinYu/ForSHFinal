@@ -14,6 +14,7 @@ public class Enemy2 : MonoBehaviour
     Animator anim;
     public bool isChase;
     public bool isAttack2;
+    Player2 player;
 
     public int damage = 1;
 
@@ -33,8 +34,16 @@ public class Enemy2 : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+
             Player2 player = other.GetComponent<Player2>();//플레이어 스크립트 가져옴
-            player.health2 -= damage;
+            if (player.isShield == true)
+            {
+                return;
+            }
+            else
+            {
+                player.health2 -= damage;
+            }
 
             Debug.Log(player.health2);
         }

@@ -30,17 +30,16 @@ public class WitchController : MonoBehaviour
     {
         if(isChase)
             nvAgent.SetDestination(target.position);
+        OnDamage();
     }
 
-    IEnumerator OnDamage()
+    void OnDamage()
     {
-        yield return new WaitForSeconds(0.1f);
-
         if (health <= 0)
         {
             isChase = false;
             anim.SetTrigger("doDie");
-            Destroy(gameObject);
+            Destroy(gameObject, 4);
         }
     }
 }

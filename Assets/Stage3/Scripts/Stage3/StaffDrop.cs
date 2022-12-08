@@ -5,7 +5,6 @@ using UnityEngine;
 public class StaffDrop : MonoBehaviour
 {
     public GameObject staffPrefab;
-    GameObject witch;
     float span = 3.0f; //화살 생성 주기
     float delta = 0; //현재 경과 시간
     public Transform target;
@@ -13,7 +12,7 @@ public class StaffDrop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        witch = GameObject.Find("ChaWitch");
+        
     }
 
     // Update is called once per frame

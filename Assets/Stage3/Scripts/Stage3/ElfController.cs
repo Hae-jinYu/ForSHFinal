@@ -78,9 +78,15 @@ public class ElfController : MonoBehaviour
                 gemCurr = gemCounts;
             Destroy(other.gameObject);
         }
+        if (other.tag == "Staff")
+        {
+            Debug.Log("Damaged");
+            heart--;
+            OnDamage();
+        }
     }
 
-    /*IEnumerator OnDamage()
+    void OnDamage()
     {
         if(heart>0)
             animator.SetTrigger("Damaged");
@@ -89,7 +95,6 @@ public class ElfController : MonoBehaviour
             animator.SetTrigger("doDie");
             Destroy(gameObject, 4);
         }
-        yield return new WaitForSeconds(0.1f);
             
-    }*/
+    }
 }

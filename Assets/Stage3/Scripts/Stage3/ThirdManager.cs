@@ -8,6 +8,7 @@ public class ThirdManager : MonoBehaviour
 {
     public ElfController elf;
     public Text gemCountTxt;
+    public Text heartTxt;
 
     private void Awake()
     {
@@ -25,5 +26,6 @@ public class ThirdManager : MonoBehaviour
     void Update()
     {
         gemCountTxt.text = elf.gemCurr+" / " + elf.gemCounts;
+        heartTxt.text = string.Format("{0:n0}", elf.heart);
     }
 }

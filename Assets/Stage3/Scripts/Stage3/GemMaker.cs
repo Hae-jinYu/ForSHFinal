@@ -5,13 +5,11 @@ using UnityEngine;
 public class GemMaker : MonoBehaviour
 {
     public GameObject gemPrefab;
-    GameObject player;
     public int gemCounts = 10;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("elf demo");
         for (int i = 0; i < gemCounts; i++)
         {
             MakeGems();

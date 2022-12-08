@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 2893828473827002339}
   - component: {fileID: 1138292381155488553}
   - component: {fileID: -4044621786434114369}
-  - component: {fileID: -1293782654620266476}
+  - component: {fileID: 4130166871138957680}
   m_Layer: 8
   m_Name: Staff_01
-  m_TagString: Item
+  m_TagString: Staff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +99,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8024611349946882221, guid: 65e6b850c47ad2c4eb122d4df2789d80, type: 3}
---- !u!114 &-1293782654620266476
+--- !u!114 &4130166871138957680
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

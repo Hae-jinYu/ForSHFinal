@@ -23,7 +23,7 @@ public class StaffDrop : MonoBehaviour
         {
             delta = 0;
             GameObject StaffPrefab = Instantiate(staffPrefab);
-            StaffPrefab.transform.position = target.position + new Vector3(0f,2f,0f);
+            StaffPrefab.transform.position = target.position + new Vector3(0f, 2f, 0f);
             StaffPrefab.transform.parent = transform;
         }
     }

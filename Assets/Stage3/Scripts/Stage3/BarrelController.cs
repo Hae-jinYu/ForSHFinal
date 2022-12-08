@@ -5,6 +5,7 @@ using UnityEngine;
 public class BarrelController : MonoBehaviour
 {
     public GameObject barrelWater;
+    public ElfController elf;
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +21,10 @@ public class BarrelController : MonoBehaviour
 
     void Swap()
     {
-        //Gem을 10개 모으면
-        this.gameObject.SetActive(false);
-        barrelWater.SetActive(true);
+        if (elf.gemCurr == 10)
+        {
+            this.gameObject.SetActive(false);
+            barrelWater.SetActive(true);
+        }
     }
 }

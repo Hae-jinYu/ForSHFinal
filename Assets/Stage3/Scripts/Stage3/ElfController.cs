@@ -11,19 +11,24 @@ public class ElfController : MonoBehaviour
     public float rotateSpeed = 100f;
     Rigidbody rigid;
     public Camera followCamera;
+    public ThirdManager manager;
+    public WitchController witch;
 
     bool isJump;
+    public bool isStop;
     public float jumppower;
     public int heart;
     public int maxHeart;
     public int gemCurr = 0;
     public int gemCounts = 10;
+
     // Start is called before the first frame update
     void Start()
     {
         transform = GetComponent<Transform>();
         animator = GetComponentInChildren<Animator>();
         rigid = GetComponent<Rigidbody>();
+        isStop = false;
     }
 
     // Update is called once per frame
@@ -32,14 +37,18 @@ public class ElfController : MonoBehaviour
         float xInput = Input.GetAxis("Horizontal");
         float yInput = Input.GetAxis("Vertical");
 
-        float xSpeed = xInput * speed;
-        float zSpeed = yInput * speed;
+        //float xSpeed = xInput * speed;
+        //float zSpeed = yInput * speed;
 
-        Vector3 moveVec = new Vector3(xInput, 0, yInput).normalized;
-        transform.position += moveVec * speed * Time.deltaTime;
-        transform.LookAt(transform.position + moveVec);
+        if (!isStop)
+        {
+            Vector3 moveVec = new Vector3(xInput, 0, yInput).normalized;
+            transform.position += moveVec * speed * Time.deltaTime;
+            transform.LookAt(transform.position + moveVec);
+        }
+        
 
-        if (Input.GetKeyDown(KeyCode.Space) && !isJump)
+        if (Input.GetKeyDown(KeyCode.Space) && !isJump && !isStop)
         {
             Debug.Log("Jump");
             rigid.AddForce(Vector3.up * jumppower, ForceMode.Impulse);
@@ -93,6 +102,8 @@ public class ElfController : MonoBehaviour
         else
         {
             animator.SetTrigger("doDie");
+            manager.GameOver();
+            witch.isChase = false;
             Destroy(gameObject, 4);
         }
             

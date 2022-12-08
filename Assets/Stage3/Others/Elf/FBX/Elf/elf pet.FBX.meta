@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 85c4846579621ba4a81e10643ee4fb7f
+guid: 428e87d475580ca458360e8c4956c12b
 ModelImporter:
   serializedVersion: 22103
   internalIDToNameTable:
@@ -359,10 +359,10 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips:
-  - ff0580a8c6529ff4c86337840292b4d9
-  - ec171ef58cd9c8c46995d3524520730c
-  - bfc541ed2c199a64f967839318a0fdb8
-  - cc86e997a53910f45a65d47ba158dc0f
+  - 0672d0af8c3cc8245af858351d3b6c33
+  - ba9051795f1603d488a0ea998dbacc27
+  - 83a1a7554c6f87d4ca1b10a0b635da63
+  - 3a01564ae5eb666408a3de30ecaa958c
   importAnimation: 1
   humanDescription:
     serializedVersion: 3

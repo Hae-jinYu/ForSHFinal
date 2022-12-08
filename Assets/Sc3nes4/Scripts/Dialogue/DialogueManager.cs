@@ -101,7 +101,7 @@ public class DialogueManager : MonoBehaviour
             {
                 if (t_white)
                 {
-                    t_letter = "<color=#000000>" + t_letter + "</color>";
+                    t_letter = "<color=#323232>" + t_letter + "</color>";
                 }
                 else if(t_blue)
                 {

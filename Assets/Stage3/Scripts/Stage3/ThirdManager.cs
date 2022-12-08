@@ -36,6 +36,14 @@ public class ThirdManager : MonoBehaviour
         gemCountTxt.text = elf.gemCurr+" / " + elf.gemCounts;
         heartTxt.text = elf.heart.ToString();
     }
+
+    public void Restart()
+    {
+        MenuPanel.SetActive(false);
+        GamePanel.SetActive(true);
+        elf.isStop = false;
+        witch.isChase = true;
+    }
     public void OnClickButton()
     {
         Debug.Log("Pour!");

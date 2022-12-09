@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.1802846, g: 0.2257161, b: 0.3069235, a: 1}
+  m_IndirectSpecularColor: {r: 0.1802841, g: 0.22571552, b: 0.3069227, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4533,9 +4533,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Restart
+      - m_Target: {fileID: 1173332704}
+        m_TargetAssemblyTypeName: SecondManager, Assembly-CSharp
+        m_MethodName: Restart2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8747,7 +8747,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1190356415}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1173332704}
+        m_TargetAssemblyTypeName: SecondManager, Assembly-CSharp
+        m_MethodName: Restart2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1190356415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10301,7 +10313,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1348127780}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1173332704}
+        m_TargetAssemblyTypeName: SecondManager, Assembly-CSharp
+        m_MethodName: GameOver2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1348127780
 MonoBehaviour:
   m_ObjectHideFlags: 0
